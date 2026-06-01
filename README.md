@@ -15,3 +15,8 @@ npm run dev
 npm run build
 npm run preview
 ```
+
+## Сайт на GitHub Pages
+
+После push в `main` деплой идёт автоматически:  
+https://ileykka.github.io/aero-dinamic/
