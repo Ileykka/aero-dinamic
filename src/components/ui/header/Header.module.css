@@ -1,0 +1,221 @@
+.site-header {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  align-items: center;
+  gap: clamp(2rem, 4vw, 4.5rem);
+  padding: 24px 63px;
+  background-color: var(--surface-chrome);
+}
+
+.site-header__search-slot {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 0;
+}
+
+.site-header__search-field {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: min(100%, 640px);
+  min-height: 69px;
+  padding: 12px 14px 12px 12px;
+  box-sizing: border-box;
+  border-radius: 8px;
+  background-color: var(--surface-muted);
+  border: 1px solid transparent;
+  transition: border-color 0.2s;
+}
+
+.site-header__search-field:focus-within {
+  border: 1px solid var(--border-strong);
+}
+
+.site-header__search-submit,
+.site-header__search-close {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  border: none;
+  padding: 0;
+  margin: 0;
+  background: none;
+  color: var(--text-main);
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.site-header__search-submit:focus-visible,
+.site-header__search-close:focus-visible {
+  outline: 2px solid var(--text-main);
+  outline-offset: 2px;
+}
+
+.site-header__search-submit:hover,
+.site-header__search-submit:focus-visible,
+.site-header__search-close:hover,
+.site-header__search-close:focus-visible {
+  color: var(--text-muted);
+}
+
+.site-header__search-input {
+  flex: 1;
+  min-width: 0;
+  border: none;
+  padding: 0;
+  margin: 0;
+  background: transparent;
+  color: var(--text-main);
+  outline: none;
+  caret-color: var(--text-main);
+  font-family: var(--font-regular);
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 24px;
+}
+
+.site-header__search-input::placeholder {
+  color: var(--text-secondary);
+}
+
+.site-header__logo {
+  display: block;
+  max-inline-size: 12.875rem;
+}
+
+.site-header__logo-image {
+  inline-size: 100%;
+  block-size: auto;
+  object-fit: contain;
+}
+
+.site-header__nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8%;
+  margin-top: 5px;
+  flex-wrap: wrap;
+}
+
+.site-header__nav-link {
+  font-family: var(--font-regular);
+  font-weight: 400;
+  font-size: clamp(1rem, 1.15vw, 1.25rem);
+  letter-spacing: 0;
+  line-height: 1.4;
+}
+
+.site-header__nav-link {
+  color: var(--text-main);
+  transition: color 0.2s;
+}
+
+.site-header__nav-link:hover,
+.site-header__nav-link:focus-visible,
+.site-header__search:hover,
+.site-header__search:focus-visible,
+.site-header__action:hover,
+.site-header__action:focus-visible {
+  color: var(--text-muted);
+}
+
+.site-header__controls {
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+    margin-top: 10px;
+    gap: 21px
+}
+
+.site-header__search,
+.site-header__action {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  padding: 0;
+  background: none;
+  color: inherit;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.site-header__search,
+.site-header__action {
+  color: var(--text-main);
+  transition: color 0.2s;
+}
+
+.site-header__icon {
+  display: block;
+  line-height: 0;
+}
+
+.site-header__icon svg {
+  display: block;
+  inline-size: 100%;
+  block-size: 100%;
+}
+
+.site-header__icon [stroke="white"] {
+  stroke: currentColor;
+  transition: stroke 0.2s;
+}
+
+.site-header__icon [fill="white"] {
+  fill: currentColor;
+  transition: fill 0.2s;
+}
+
+.site-header__icon--search {
+  inline-size: 44px;
+  block-size: 48px;
+  margin-right: -4px;
+}
+
+.site-header__icon--search-inline {
+  inline-size: 36px;
+  block-size: 40px;
+}
+
+.site-header__close-svg {
+  display: block;
+}
+
+.site-header__icon--favorites {
+  inline-size: 40px;
+  block-size: 40px;
+}
+
+.site-header__icon--cart {
+  inline-size: 37px;
+  block-size: 36px;
+}
+
+.site-header__cart-badge {
+  position: absolute;
+  top: -8px;
+  right: -13px;
+  box-sizing: border-box;
+  min-inline-size: 14px;
+  block-size: 14px;
+  padding-inline: 3px;
+  border-radius: 50%;
+  background: #ff0000;
+  color: var(--text-main);
+  font-family: var(--font-medium);
+  font-size: 9px;
+  font-weight: 500;
+  line-height: 14px;
+  text-align: center;
+  pointer-events: none;
+}
+
+.site-header__icon--account {
+  inline-size: 32px;
+  block-size: 34px;
+}
